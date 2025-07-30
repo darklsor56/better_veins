@@ -17,3 +17,54 @@ Thumbs.db
 # Ignore build output
 Assemblies/bin/
 Assemblies/obj/
+
+# Generic .gitignore config I found online for C#.
+# Build artifacts
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code/Visual Studio folders
+.vscode/
+.vs/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Rider/JetBrains
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Mod-specific: Don't include Harmony or RimWorld DLLs
+**/0Harmony.dll
+**/RimWorldWin64_Data/Managed/
+**/UnityEngine*.dll
+**/Assembly-CSharp*.dll
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+*.ps1
+project.lock.json
+project.fragment.lock.json
+
+# Logs and temp
+*.log
+*.tmp
+
+# User configs
+*.bak
+*.cache
+*.prefs
+*.sln.ide
+*.orig
