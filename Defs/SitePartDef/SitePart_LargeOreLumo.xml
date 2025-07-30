@@ -2,6 +2,7 @@
 
   <WorldObjectDef ParentName="Site">
     <defName>MassiveOreDeposit</defName>
+    <mapGenerator>OreMiningSite</mapGenerator>
     <label>massive ore deposit</label>
     <description>A large deposit of valuable minerals has been detected here. Its size suggests it may be worth the effort to extract.</description>
     <texture>World/WorldObjects/ItemStash</texture> <!-- You can reuse an existing icon or supply your own -->
@@ -34,4 +35,17 @@
     </tags>
   </SitePartDef>
 
-</Defs>
+  <MapGeneratorDef>
+    <defName>OreMiningSite</defName>
+    <label>ore mining site</label>
+    <genSteps>
+      <li>BetterVeins_OreDeposit</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>BetterVeins_OreDeposit</defName>
+    <order>200</order>
+    <genStep Class="GenStep_Asteroid">
+    </genStep>
+  </GenStepDef>
