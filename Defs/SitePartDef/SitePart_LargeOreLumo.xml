@@ -23,8 +23,8 @@
     <workerClass>SitePartWorker_ItemStash</workerClass>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/MassiveOreDeposit_Expanded</expandingIconTexture>
-    <approachOrderString>Investigate {0}</approachOrderString>
-    <approachingReportString>Investigating {0}.</approachingReportString>
+    <approachOrderString>Travel to {0}</approachOrderString>
+    <approachingReportString>Traveling to {0}.</approachingReportString>
     <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <considerEnteringAsAttack>false</considerEnteringAsAttack>
     <applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
