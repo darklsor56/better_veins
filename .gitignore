@@ -1,0 +1,19 @@
+.vs
+Assemblies
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore hidden system folders
+*.suo
+*.user
+
+# Ignore Unity metadata (if applicable)
+*.csproj
+*.unityproj
+*.sln
+*.meta
+
+# Ignore build output
+Assemblies/bin/
+Assemblies/obj/

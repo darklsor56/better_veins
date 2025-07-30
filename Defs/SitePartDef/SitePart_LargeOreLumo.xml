@@ -1,0 +1,37 @@
+<Defs>
+
+  <WorldObjectDef ParentName="Site">
+    <defName>MassiveOreDeposit</defName>
+    <label>massive ore deposit</label>
+    <description>A large deposit of valuable minerals has been detected here. Its size suggests it may be worth the effort to extract.</description>
+    <texture>World/WorldObjects/ItemStash</texture> <!-- You can reuse an existing icon or supply your own -->
+    <!-- <siteTexture>World/WorldObjects/MassiveOreDeposit_Expanded</siteTexture> -->
+    <expandingIcon>false</expandingIcon>
+    <!-- <expandingIconPriority>70</expandingIconPriority> -->
+    <!-- <useDynamicDrawer>true</useDynamicDrawer> -->
+    <worldObjectClass>Site</worldObjectClass> <!-- Keep this unless you're writing custom site logic in C# -->
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" />
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+    </comps>
+  </WorldObjectDef>
+
+  <!-- SitePart to prevent site from erroring -->
+  <SitePartDef Name="MassiveOreDeposit">
+    <defName>MassiveOreDeposit</defName>
+    <label>massive ore deposit</label>
+    <workerClass>SitePartWorker_ItemStash</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/MassiveOreDeposit_Expanded</expandingIconTexture>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigating {0}.</approachingReportString>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <considerEnteringAsAttack>false</considerEnteringAsAttack>
+    <applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>false</gravShipsCanLandOn>
+    <tags>
+      <li>MassiveOreDepositTag</li>
+    </tags>
+  </SitePartDef>
+
+</Defs>
