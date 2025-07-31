@@ -46,7 +46,7 @@
   <GenStepDef>
     <defName>BetterVeins_OreDeposit</defName>
     <order>200</order>
-    <genStep Class="GenStep_BetterVeins_OreDeposit" />
+    <genStep Class="BetterVeins.GenStep_BetterVeins_OreDeposit" />
   </GenStepDef>
 
 </Defs>

@@ -37,6 +37,7 @@ namespace BetterVeins
             int placed = 0;
             foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, 10f, useCenter: true))
             {
+                // Find a valid spot for the lump
                 if (!cell.InBounds(map)) continue;
                 if (!cell.Standable(map)) continue;
                 if (cell.GetFirstMineable(map) != null) continue;
@@ -44,6 +45,7 @@ namespace BetterVeins
                 GenSpawn.Spawn(ThingDefOf.MineableSteel, cell, map);
                 placed++;
 
+                // Stop when enough is placed.
                 if (placed >= lumpSize) break;
             }
 
