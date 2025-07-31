@@ -1,0 +1,15 @@
+<Defs>
+  <WorldObjectDef ParentName="Site">
+    <defName>MassiveOreDeposit</defName>
+    <mapGenerator>OreMiningSite</mapGenerator>
+    <label>massive ore deposit</label>
+    <description>A large deposit of valuable minerals has been detected here. Its size suggests it may be worth the effort to extract.</description>
+    <texture>World/WorldObjects/ItemStash</texture>
+    <expandingIcon>false</expandingIcon>
+    <worldObjectClass>Site</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" />
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+    </comps>
+  </WorldObjectDef>
+</Defs>

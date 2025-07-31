@@ -1,0 +1,9 @@
+<!-- Responsible for initiating the generation process -->
+<Defs>
+  <GenStepDef>
+    <defName>BetterVeins_OreDeposit</defName>
+    <linkWithSite>MassiveOreDeposit</linkWithSite>
+    <order>900</order>
+    <genStep Class="BetterVeins.GenStep_BetterOreLump" />
+  </GenStepDef>
+</Defs>

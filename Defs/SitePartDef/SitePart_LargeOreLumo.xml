@@ -1,23 +1,4 @@
 <Defs>
-
-  <WorldObjectDef ParentName="Site">
-    <defName>MassiveOreDeposit</defName>
-    <mapGenerator>OreMiningSite</mapGenerator>
-    <label>massive ore deposit</label>
-    <description>A large deposit of valuable minerals has been detected here. Its size suggests it may be worth the effort to extract.</description>
-    <texture>World/WorldObjects/ItemStash</texture> <!-- You can reuse an existing icon or supply your own -->
-    <!-- <siteTexture>World/WorldObjects/MassiveOreDeposit_Expanded</siteTexture> -->
-    <expandingIcon>false</expandingIcon>
-    <!-- <expandingIconPriority>70</expandingIconPriority> -->
-    <!-- <useDynamicDrawer>true</useDynamicDrawer> -->
-    <worldObjectClass>Site</worldObjectClass>
-    <comps>
-      <li Class="WorldObjectCompProperties_Timeout" />
-      <li Class="WorldObjectCompProperties_FormCaravan" />
-    </comps>
-  </WorldObjectDef>
-
-  <!-- SitePart to prevent site from erroring -->
   <SitePartDef Name="MassiveOreDeposit">
     <defName>MassiveOreDeposit</defName>
     <label>massive ore deposit</label>
@@ -34,20 +15,4 @@
       <li>MassiveOreDepositTag</li>
     </tags>
   </SitePartDef>
-
-  <MapGeneratorDef>
-    <defName>OreMiningSite</defName>
-    <label>ore mining site</label>
-    <genSteps>
-      <li>BetterVeins_OreDeposit</li>
-    </genSteps>
-  </MapGeneratorDef>
-
-<GenStepDef>
-  <defName>BetterVeins_OreDeposit</defName>
-  <linkWithSite>MassiveOreDeposit</linkWithSite>
-  <order>900</order>
-  <genStep Class="BetterVeins.GenStep_BetterOreLump" />
-</GenStepDef>
-
 </Defs>
