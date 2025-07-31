@@ -10,7 +10,7 @@
     <expandingIcon>false</expandingIcon>
     <!-- <expandingIconPriority>70</expandingIconPriority> -->
     <!-- <useDynamicDrawer>true</useDynamicDrawer> -->
-    <worldObjectClass>Site</worldObjectClass> <!-- Keep this unless you're writing custom site logic in C# -->
+    <worldObjectClass>Site</worldObjectClass>
     <comps>
       <li Class="WorldObjectCompProperties_Timeout" />
       <li Class="WorldObjectCompProperties_FormCaravan" />
@@ -46,7 +46,7 @@
   <GenStepDef>
     <defName>BetterVeins_OreDeposit</defName>
     <order>200</order>
-    <genStep Class="BetterVeins.GenStep_BetterVeins_OreDeposit" />
+    <genStep Class="BetterVeins.GenStep_BetterOreLump" />
   </GenStepDef>
 
 </Defs>
