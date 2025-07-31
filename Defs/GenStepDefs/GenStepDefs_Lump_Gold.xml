@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for gold lumps-->
+<Defs>
+
+    <!-- Gold -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Gold</defName>
+        <linkWithSite>MassiveOreDeposit_Gold</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableGold</oreDef>
+            <oreTileCountRange>
+                <min>35</min>
+                <max>60</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>

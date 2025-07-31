@@ -1,0 +1,8 @@
+<Defs>
+
+    <SitePartDef ParentName="MassiveOreDepositBase">
+        <defName>MassiveOreDeposit_Gold</defName>
+        <label>Gold Deposit</label>
+    </SitePartDef>
+
+</Defs>
