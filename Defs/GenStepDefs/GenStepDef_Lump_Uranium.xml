@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for uranium lumps-->
+<Defs>
+
+    <!-- Uranium -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Uranium</defName>
+        <linkWithSite>MassiveOreDeposit_Uranium</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableUranium</oreDef>
+            <oreTileCountRange>
+                <min>65</min>
+                <max>100</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>

@@ -1,0 +1,10 @@
+<Defs>
+
+    <WorldObjectDef ParentName="World_MassiveOreDepositBase">
+        <defName>MassiveOreDeposit_Uranium</defName>
+        <label>Massive Uranium Ore Deposit</label>
+        <description>A large deposit of uranium has been detected here. Its size suggests it may be worth the effort to extract.</description>
+        <mapGenerator>OreMiningSite_Uranium</mapGenerator>
+    </WorldObjectDef>
+
+</Defs>

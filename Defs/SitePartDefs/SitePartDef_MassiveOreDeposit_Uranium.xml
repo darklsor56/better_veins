@@ -1,0 +1,8 @@
+<Defs>
+
+    <SitePartDef ParentName="MassiveOreDepositBase">
+        <defName>MassiveOreDeposit_Uranium</defName>
+        <label>Uranium Deposit</label>
+    </SitePartDef>
+
+</Defs>

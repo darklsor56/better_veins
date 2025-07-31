@@ -1,0 +1,11 @@
+<Defs>
+
+    <MapGeneratorDef>
+        <defName>OreMiningSite_Uranium</defName>
+        <label>Uranium Mining Site</label>
+        <genSteps>
+            <li>BetterVeins_Lump_Uranium</li>
+        </genSteps>
+    </MapGeneratorDef>
+
+</Defs>
