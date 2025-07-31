@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;     // Harmony is the library used to patch RimWorld methods
 using RimWorld;       // RimWorld-specific types like GenStep_ScatterLumpsMineable
 using Verse;          // Core game types like Log, Map, etc.
+using UnityEngine;    // Unity types, if needed (not used in this example)
 
 namespace BetterVeins
 {
@@ -31,13 +32,40 @@ namespace BetterVeins
     {
         // This method runs *before* the original Generate() method.
         // You can modify arguments or skip the original method entirely (with a `return false`).
-        public static void Prefix(Map map)
+        public static bool Prefix(Map map)
         {
             // This log confirms the patch is being called during map generation.
             Log.Message("[BetterVeins] Patching GenStep_ScatterLumpsMineable.Generate!");
 
-            // You can add logic here to affect the map before ore generation.
-            // For example: remove zones, alter terrain, or replace ore defs.
+            // Define the number of things generated
+            ThingDef thingDef = ThingDefOf.Steel; // CHANGE LATER
+
+            // Number of lumps (1 lump = 75 steel by default)
+            int count = 1;
+
+            // Try to find a suitable cell on the map to place the lump.
+            IntVec3 center;
+            if (!CellFinder.TryFindRandomCell(map, c => c.Standable(map) && c.GetFirstMineable(map) == null, out center))
+            {
+                Log.Warning("[BetterVeins] Failed to find a valid cell using fallback CellFinder.");
+                return false;
+            }
+
+            if (center != IntVec3.Invalid)
+            {
+                // Create and spawn the mineable lump
+                Thing mineable = ThingMaker.MakeThing(thingDef);
+                mineable.stackCount = 75 * count; // Set the stack size (75 steel per lump by default)
+
+                GenSpawn.Spawn(mineable, center, map, WipeMode.Vanish);
+                Log.Message($"[BetterVeins] Spawned {mineable.stackCount} steel at {center}.");
+            }
+            else
+            {
+                Log.Warning("[BetterVeins] Could not find a valid cell to spawn the mineable lump.");
+            }
+
+            return false;
         }
     }
 }
