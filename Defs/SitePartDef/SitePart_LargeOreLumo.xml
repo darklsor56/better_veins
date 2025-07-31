@@ -1,7 +1,5 @@
 <Defs>
-  <SitePartDef Name="MassiveOreDeposit">
-    <defName>MassiveOreDeposit</defName>
-    <label>massive ore deposit</label>
+  <SitePartDef Abstract="True" Name="MassiveOreDepositBase">
     <workerClass>SitePartWorker_ItemStash</workerClass>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/MassiveOreDeposit_Expanded</expandingIconTexture>

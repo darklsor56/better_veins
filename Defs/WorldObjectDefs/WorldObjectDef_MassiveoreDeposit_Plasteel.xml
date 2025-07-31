@@ -1,0 +1,10 @@
+<Defs>
+
+    <WorldObjectDef>
+        <defName>MassiveOreDeposit_Plasteel</defName>
+        <label>Massive Plasteel Ore Deposit</label>
+        <description>A large deposit of plasteel has been detected here. Its size suggests it may be worth the effort to extract.</description>
+        <mapGenerator>OreMiningSite_Plasteel</mapGenerator>
+    </WorldObjectDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<Defs>
+
+    <MapGeneratorDef>
+        <defName>OreMiningSite_Plasteel</defName>
+        <label>Plasteel Mining Site</label>
+        <genSteps>
+            <li>BetterVeins_Lump_Plasteel</li>
+        </genSteps>
+    </MapGeneratorDef>
+
+</Defs>

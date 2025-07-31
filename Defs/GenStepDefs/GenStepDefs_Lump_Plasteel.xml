@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for plasteel lumps-->
+<Defs>
+
+    <!-- Plasteel -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Plasteel</defName>
+        <linkWithSite>MassiveOreDeposit_Plasteel</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableSteel</oreDef>
+            <oreTileCountRange>
+                <min>63</min>
+                <max>88</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>
