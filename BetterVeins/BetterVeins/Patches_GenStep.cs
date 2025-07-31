@@ -25,47 +25,30 @@ namespace BetterVeins
         }
     }
 
-    // This defines a Harmony patch for the Generate() method in GenStep_ScatterLumpsMineable.
-    // This is the class responsible for spawning minable ore lumps on the map.
-    [HarmonyPatch(typeof(GenStep_ScatterLumpsMineable), "Generate")]
-    public static class Patch_GenStep_ScatterLumpsMineable_Generate
+    public class GenStep_BetterVeins_OreDeposit : GenStep
     {
-        // This method runs *before* the original Generate() method.
-        // You can modify arguments or skip the original method entirely (with a `return false`).
-        public static bool Prefix(Map map)
+        public override int SeedPart => 1337420;
+
+        public override void Generate(Map map, GenStepParams parms)
         {
-            // This log confirms the patch is being called during map generation.
-            Log.Message("[BetterVeins] Patching GenStep_ScatterLumpsMineable.Generate!");
+            IntVec3 center = new IntVec3(map.Size.x / 2, 0, map.Size.z / 2);
+            int lumpSize = Rand.RangeInclusive(20, 30); // Number of tiles in the ore lump
 
-            // Define the number of things generated
-            ThingDef thingDef = ThingDefOf.Steel; // CHANGE LATER
-
-            // Number of lumps (1 lump = 75 steel by default)
-            int count = 1;
-
-            // Try to find a suitable cell on the map to place the lump.
-            IntVec3 center;
-            if (!CellFinder.TryFindRandomCell(map, c => c.Standable(map) && c.GetFirstMineable(map) == null, out center))
+            int placed = 0;
+            foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, 10f, useCenter: true))
             {
-                Log.Warning("[BetterVeins] Failed to find a valid cell using fallback CellFinder.");
-                return false;
+                if (!cell.InBounds(map)) continue;
+                if (!cell.Standable(map)) continue;
+                if (cell.GetFirstMineable(map) != null) continue;
+
+                GenSpawn.Spawn(ThingDefOf.MineableSteel, cell, map);
+                placed++;
+
+                if (placed >= lumpSize) break;
             }
 
-            if (center != IntVec3.Invalid)
-            {
-                // Create and spawn the mineable lump
-                Thing mineable = ThingMaker.MakeThing(thingDef);
-                mineable.stackCount = 75 * count; // Set the stack size (75 steel per lump by default)
-
-                GenSpawn.Spawn(mineable, center, map, WipeMode.Vanish);
-                Log.Message($"[BetterVeins] Spawned {mineable.stackCount} steel at {center}.");
-            }
-            else
-            {
-                Log.Warning("[BetterVeins] Could not find a valid cell to spawn the mineable lump.");
-            }
-
-            return false;
+            Log.Message($"[BetterVeins] Spawned {placed} compacted steel tiles near center of map.");
         }
     }
+   
 }

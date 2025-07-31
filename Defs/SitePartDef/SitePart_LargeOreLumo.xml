@@ -35,7 +35,6 @@
     </tags>
   </SitePartDef>
 
-  <!--
   <MapGeneratorDef>
     <defName>OreMiningSite</defName>
     <label>ore mining site</label>
@@ -47,10 +46,7 @@
   <GenStepDef>
     <defName>BetterVeins_OreDeposit</defName>
     <order>200</order>
-    <genStep Class="GenStep_Asteroid">
-    </genStep>
+    <genStep Class="GenStep_BetterVeins_OreDeposit" />
   </GenStepDef>
-
-  -->
 
 </Defs>
