@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for jade lumps-->
+<Defs>
+
+    <!-- Jade -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Jade</defName>
+        <linkWithSite>MassiveOreDeposit_Jade</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableJade</oreDef>
+            <oreTileCountRange>
+                <min>35</min>
+                <max>50</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>

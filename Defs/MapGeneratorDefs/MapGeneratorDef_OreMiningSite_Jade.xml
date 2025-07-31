@@ -1,0 +1,11 @@
+<Defs>
+
+    <MapGeneratorDef>
+        <defName>OreMiningSite_Jade</defName>
+        <label>Jade Mining Site</label>
+        <genSteps>
+            <li>BetterVeins_Lump_Jade</li>
+        </genSteps>
+    </MapGeneratorDef>
+
+</Defs>
