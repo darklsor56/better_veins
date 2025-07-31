@@ -8,13 +8,14 @@ namespace BetterVeins
 {
     public class GenStep_BetterOreLump : GenStep
     {
-        public ThingDef oreDef;
+        public string oreDef;
         public IntRange oreTileCountRange = new IntRange(300, 450);
 
         public override int SeedPart => 987654321;
 
         public override void Generate(Map map, GenStepParams parms)
         {
+            ThingDef oreDef = DefDatabase<ThingDef>.GetNamedSilentFail(this.oreDef);
             if (oreDef == null)
             {
                 Log.Error("[BetterVeins] MineableSteel is null! Check ThingDefOf initialization.");

@@ -1,6 +1,6 @@
 <Defs>
-  <WorldObjectDef Abstract="True", Name="MassiveOreDepositBase", ParentName="Site">
-    <defName>MassiveOreDeposit</defName>
+  <WorldObjectDef Abstract="True" Name="World_MassiveOreDepositBase" ParentName="Site">
+    <defName>MassiveOreDepositBase</defName>
     <label>massive ore deposit</label>
     <description>A large deposit of valuable minerals has been detected here. Its size suggests it may be worth the effort to extract.</description>
     <texture>World/WorldObjects/ItemStash</texture>

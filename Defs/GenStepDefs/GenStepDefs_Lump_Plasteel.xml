@@ -7,7 +7,7 @@
         <linkWithSite>MassiveOreDeposit_Plasteel</linkWithSite>
         <order>900</order>
         <genStep Class="BetterVeins.GenStep_BetterOreLump">
-            <oreDef>MineableSteel</oreDef>
+            <oreDef>MineablePlasteel</oreDef>
             <oreTileCountRange>
                 <min>63</min>
                 <max>88</max>
