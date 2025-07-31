@@ -1,0 +1,10 @@
+<Defs>
+
+    <WorldObjectDef ParentName="World_MassiveOreDepositBase">
+        <defName>MassiveOreDeposit_Silver</defName>
+        <label>Massive Silver Ore Deposit</label>
+        <description>A large deposit of silver has been detected here. Its size suggests it may be worth the effort to extract.</description>
+        <mapGenerator>OreMiningSite_Silver</mapGenerator>
+    </WorldObjectDef>
+
+</Defs>

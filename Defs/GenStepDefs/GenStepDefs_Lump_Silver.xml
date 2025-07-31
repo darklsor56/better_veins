@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for silver lumps-->
+<Defs>
+
+    <!-- Silver -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Silver</defName>
+        <linkWithSite>MassiveOreDeposit_Silver</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableSilver</oreDef>
+            <oreTileCountRange>
+                <min>350</min>
+                <max>500</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>
