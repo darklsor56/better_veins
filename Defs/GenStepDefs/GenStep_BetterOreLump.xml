@@ -1,9 +1,31 @@
 <!-- Responsible for initiating the generation process -->
 <Defs>
-  <GenStepDef>
-    <defName>BetterVeins_OreDeposit</defName>
-    <linkWithSite>MassiveOreDeposit</linkWithSite>
-    <order>900</order>
-    <genStep Class="BetterVeins.GenStep_BetterOreLump" />
-  </GenStepDef>
+
+    <!-- Steel -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Steel</defName>
+        <linkWithSite>MassiveOreDeposit_Steel</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableSteel</oreDef>
+            <oreTileCountRange>
+                <min>350</min>
+                <max>450</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+
+    <!-- Plasteel -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_Plasteel</defName>
+        <linkWithSite>MassiveOreDeposit_Plasteel</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableSteel</oreDef>
+            <oreTileCountRange>
+                <min>63</min>
+                <max>88</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
 </Defs>
