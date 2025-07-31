@@ -1,0 +1,18 @@
+<!-- Responsible for initiating the generation process for compact machinery lumps-->
+<Defs>
+
+    <!-- Components -->
+    <GenStepDef>
+        <defName>BetterVeins_Lump_CompactMachinery</defName>
+        <linkWithSite>MassiveOreDeposit_CompactMachinery</linkWithSite>
+        <order>900</order>
+        <genStep Class="BetterVeins.GenStep_BetterOreLump">
+            <oreDef>MineableComponentsIndustrial</oreDef>
+            <oreTileCountRange>
+                <min>60</min>
+                <max>80</max>
+            </oreTileCountRange>
+        </genStep>
+    </GenStepDef>
+    
+</Defs>

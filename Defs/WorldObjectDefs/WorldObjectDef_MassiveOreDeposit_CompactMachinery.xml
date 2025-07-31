@@ -1,0 +1,10 @@
+<Defs>
+
+    <WorldObjectDef ParentName="World_MassiveOreDepositBase">
+        <defName>MassiveOreDeposit_CompactMachinery</defName>
+        <label>Massive Component Deposit</label>
+        <description>A large deposit of components has been detected here. Its size suggests it may be worth the effort to extract.</description>
+        <mapGenerator>OreMiningSite_CompactMachinery</mapGenerator>
+    </WorldObjectDef>
+
+</Defs>

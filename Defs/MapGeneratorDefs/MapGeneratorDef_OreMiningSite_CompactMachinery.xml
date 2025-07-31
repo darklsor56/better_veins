@@ -1,0 +1,11 @@
+<Defs>
+
+    <MapGeneratorDef>
+        <defName>OreMiningSite_CompactMachinery</defName>
+        <label>Component Mining Site</label>
+        <genSteps>
+            <li>BetterVeins_Lump_CompactMachinery</li>
+        </genSteps>
+    </MapGeneratorDef>
+
+</Defs>
