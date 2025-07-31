@@ -43,10 +43,11 @@
     </genSteps>
   </MapGeneratorDef>
 
-  <GenStepDef>
-    <defName>BetterVeins_OreDeposit</defName>
-    <order>200</order>
-    <genStep Class="BetterVeins.GenStep_BetterOreLump" />
-  </GenStepDef>
+<GenStepDef>
+  <defName>BetterVeins_OreDeposit</defName>
+  <linkWithSite>MassiveOreDeposit</linkWithSite>
+  <order>900</order>
+  <genStep Class="BetterVeins.GenStep_BetterOreLump" />
+</GenStepDef>
 
 </Defs>
