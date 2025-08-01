@@ -1,6 +1,6 @@
 <Defs>
   <SitePartDef Abstract="True" Name="MassiveOreDepositBase">
-    <workerClass>SitePartWorker_ItemStash</workerClass>
+    <workerClass>SitePartWorker_PreciousLump</workerClass>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/MassiveOreDeposit_Expanded</expandingIconTexture>
     <approachOrderString>Travel to {0}</approachOrderString>
